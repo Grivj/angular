@@ -1,1 +1,17 @@
 <h1>Hello world</h1>
+
+<form [ngFormModel]="pokemonForm" (ngSubmit)="submitPokemon()">
+  <p>
+    Nom : <input type="text" ngControl="name">
+  </p>
+  <p>
+    Description : <input type="text" ngControl="description">
+  </p>
+  <p>
+    Évolution : <input type="text" ngControl="evolution">
+  </p>
+  <p>
+    PV : <input type="number" ngControl="hp">
+  </p>
+  <button type="submit" [disabled]="!pokemonForm.valid">Valider</button>
+</form>
