@@ -1,17 +1,8 @@
 <button (click)="getNames()">Get names</button>
 
-<button (click)="getNamesAndProjects()">Get names and projets</button>
-
 <div *ngIf="names">
   Names :
   <ul>
-    <li *ngFor="#name of names">{{name.firstname}}</li>
-  </ul>
-</div>
-
-<div *ngIf="projects">
-  Projets :
-  <ul>
-    <li *ngFor="#project of projects">{{project.title}}</li>
+    <li *ngFor="#name of names | async">{{name.firstname}}</li>
   </ul>
 </div>
