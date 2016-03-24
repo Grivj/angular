@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, ViewChild} from 'angular2/core';
 import {ListComponent} from './list.component';
 
 @Component({
@@ -8,8 +8,13 @@ import {ListComponent} from './list.component';
 })
 export class AppComponent {
   selected: Number;
+  @ViewChild(ListComponent) listComponent:ListComponent;
 
   optionSelected(option: Number) {
     this.selected = option;
+  }
+
+  randomSelection() {
+    this.listComponent.randomSelection();
   }
 }

@@ -11,4 +11,8 @@ export class ListComponent {
     console.log("selected option ", option);
     this.optionSelected.emit(option);
   }
+
+  randomSelection() {
+    this.selectOption(Math.floor(Math.random()*3) + 1);
+  }
 }

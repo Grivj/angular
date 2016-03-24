@@ -2,6 +2,10 @@
 
 <list (optionSelected)="optionSelected($event)"></list>
 
+<p>
+  <button (click)="randomSelection()">Random selection</button>
+</p>
+
 <div *ngIf="selected">
   Option choisie : {{selected}}
 </div>
